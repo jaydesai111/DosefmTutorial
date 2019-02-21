@@ -6,17 +6,10 @@
     tools:showIn="@layout/item_message_them"
     >
 
-    <ImageView
-        android:id="@+id/person_icon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        tools:tint="@color/primary_dark"
-        />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         >
 
         <TextView
@@ -28,18 +21,9 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             tools:background="@color/accent_light"
-            tools:text="My message goes here"
+            tools:text="My message goes her djkcnjsdk jkcs kjcsb kjscb kjbcskj bjksb ksbc bsjk kje"
             />
 
-        <TextView
-            android:id="@+id/message_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/message_text"
-            android:layout_marginStart="16dp"
-            style="@style/Base.TextAppearance.AppCompat.Caption"
-            tools:text="Tuesday"
-            />
 
     </RelativeLayout>
 

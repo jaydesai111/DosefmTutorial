@@ -13,7 +13,7 @@ import retrofit2.http.Query;
 
 public interface NetworkInterface {
 
-    @GET("api/ chat/")
+    @GET("api/chat/")
     Observable<ChatBoat> getChatResponse(@Query("apiKey") String apiKey, @Query("message") String message, @Query("chatBotID") String chatBotID, @Query("externalID") String externalID);
 
 

@@ -8,7 +8,7 @@ import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 import jay.dosefmtutorial.Api.NetworkClient;
 import jay.dosefmtutorial.Api.NetworkInterface;
-import jay.dosefmtutorial.HomeActivityViewInterface;
+import jay.dosefmtutorial.ViewsCallBack.HomeActivityViewInterface;
 import jay.dosefmtutorial.Model.ChatBoat;
 
 public class HomeActivityPresenter implements HomeActivityPresenterInterface {
@@ -22,13 +22,13 @@ public class HomeActivityPresenter implements HomeActivityPresenterInterface {
     }
 
     @Override
-    public void getResponse() {
-        getObservable().subscribeWith(getObserver());
+    public void getResponse(String message) {
+        getObservable(message).subscribeWith(getObserver());
     }
 
-    public Observable<ChatBoat> getObservable(){
+    public Observable<ChatBoat> getObservable(String message){
         return NetworkClient.getRetrofit().create(NetworkInterface.class)
-                .getChatResponse("TR7KmJSoOHHxvsft","Hi","6526","rishabh876")
+                .getChatResponse("TR7KmJSoOHHxvsft",message,"6526","rishabh876")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
